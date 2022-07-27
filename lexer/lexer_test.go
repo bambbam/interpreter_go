@@ -5,12 +5,12 @@ import (
 	"testing"
 )
 
-func TestNextToken(t *testing.T){
+func TestNextToken(t *testing.T) {
 	input := `=+(){},;`
 
-	tests := []struct{
-		expectedType	token.TokenType
-		expectedLiteral	string
+	tests := []struct {
+		expectedType    token.TokenType
+		expectedLiteral string
 	}{
 		{token.ASSIGN, "="},
 		{token.PLUS, "+"},
@@ -19,7 +19,7 @@ func TestNextToken(t *testing.T){
 		{token.LBRACE, "{"},
 		{token.RBRACE, "}"},
 		{token.COMMA, ","},
-		{token.SEMICOLON,";"},
+		{token.SEMICOLON, ";"},
 		{token.EOF, ""},
 	}
 	l := New(input)
@@ -37,7 +37,7 @@ func TestNextToken(t *testing.T){
 	}
 }
 
-func TestNextToken2(t *testing.T){
+func TestNextToken2(t *testing.T) {
 	input := `let five = 5;
 	let ten = 10;
 	
@@ -58,9 +58,9 @@ func TestNextToken2(t *testing.T){
 	10 != 9;
 	`
 
-	tests := []struct{
-		expectedType	token.TokenType
-		expectedLiteral	string
+	tests := []struct {
+		expectedType    token.TokenType
+		expectedLiteral string
 	}{
 		{token.LET, "let"},
 		{token.IDENT, "five"},

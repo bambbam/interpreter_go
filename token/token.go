@@ -2,59 +2,58 @@ package token
 
 type TokenType string
 
-type Token struct{
-	Type TokenType
+type Token struct {
+	Type    TokenType
 	Literal string
 }
 
-const(
-	ILLEGAL		= "ILLEGAL"
-	EOF			= "EOF"
+const (
+	ILLEGAL = "ILLEGAL"
+	EOF     = "EOF"
 
 	//식별자 + 리터럴
-	IDENT		= "IDENT"
-	INT			= "INT"
-	
+	IDENT = "IDENT"
+	INT   = "INT"
+
 	//연산자
-	ASSIGN		= "="
-	PLUS		= "+"
-	MINUS		= "-"
-	BANG		= "!"
-	ASTERISK	= "*"
-	SLASH		= "/"
+	ASSIGN   = "="
+	PLUS     = "+"
+	MINUS    = "-"
+	BANG     = "!"
+	ASTERISK = "*"
+	SLASH    = "/"
 
-	LT			= "<"
-	GT			= ">"
+	LT = "<"
+	GT = ">"
 
-	EQ			= "=="
-	NOT_EQ		= "!="
+	EQ     = "=="
+	NOT_EQ = "!="
 
 	//구분자
-	COMMA		= ","
-	SEMICOLON	= ";"
-	LPAREN		= "("
-	RPAREN		= ")"
-	LBRACE		= "{"
-	RBRACE		= "}"
+	COMMA     = ","
+	SEMICOLON = ";"
+	LPAREN    = "("
+	RPAREN    = ")"
+	LBRACE    = "{"
+	RBRACE    = "}"
 
 	//예약어
-	FUNCTION	= "FUNCTION"
-	LET			= "LET"
-	TRUE		= "TRUE"
-	FALSE		= "FALSE"
-	IF			= "IF"
-	ELSE		= "ELSE"
-	RETURN		= "RETURN"
-
+	FUNCTION = "FUNCTION"
+	LET      = "LET"
+	TRUE     = "TRUE"
+	FALSE    = "FALSE"
+	IF       = "IF"
+	ELSE     = "ELSE"
+	RETURN   = "RETURN"
 )
 
 var keywords = map[string]TokenType{
-	"fn": FUNCTION,
-	"let": LET,
-	"true": TRUE,
-	"false": FALSE,
-	"if": IF,
-	"else": ELSE,
+	"fn":     FUNCTION,
+	"let":    LET,
+	"true":   TRUE,
+	"false":  FALSE,
+	"if":     IF,
+	"else":   ELSE,
 	"return": RETURN,
 }
 
